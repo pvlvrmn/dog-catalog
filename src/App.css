@@ -172,6 +172,8 @@ a {
     width: 17px;
 }
 
+/* DOGS TILES */
+
 .dogs__tiles {
     margin-top: 20px;
     width: 100%;
@@ -192,7 +194,7 @@ a {
     background: #f7f7f7;
 }
 
-.active_tile {
+.dogs__tile_active {
     background: #f0f0f0;
     font-weight: bold;
     padding-left: 10px;

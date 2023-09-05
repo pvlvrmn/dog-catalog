@@ -17,7 +17,7 @@ function DogList(props: any) {
       {breeds?.map((breed) => {
         if (!query?.length || breed?.toLowerCase().includes(query?.toLowerCase())) {
           return (
-            <DogElement key={breed} breed={breed} classActive={breed === selection ? 'active_tile' : null} onClick={((e: React.ChangeEvent<any>) => handleClick(e, breed as string))} />
+            <DogElement key={breed} breed={breed} classActive={breed === selection ? 'dogs__tile_active' : null} onClick={((e: React.ChangeEvent<any>) => handleClick(e, breed as string))} />
           );
         }
         return '';
