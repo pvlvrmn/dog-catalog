@@ -44,12 +44,12 @@ function DogCard(props: any) {
 
   return (
     <div className="card__wr">
-      <div className="card__wr_title">
+      <div className="card__title">
         {data}
       </div>
-      <div className="card__wr_subbreads">
+      <div className="card__subbreads">
         {subs?.map((sub) => (
-          <div className="card__wr_subbreads_element">{sub}</div>
+          <div className="card__subbread">{sub}</div>
         ))}
       </div>
       <div className="card__images">
@@ -59,7 +59,7 @@ function DogCard(props: any) {
       </div>
       <div className="clear" />
       {(props?.data.length !== 0) ? 
-        <button type="button" className="card__wr_refresh" href="#" onClick={() => getImages(false)}>Load more</button>
+        <button type="button" className="card__refresh" href="#" onClick={() => getImages(false)}>Load more</button>
         : ''
       }
     </div>

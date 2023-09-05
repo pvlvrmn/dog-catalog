@@ -10,7 +10,7 @@ function Image(props) {
   }
 
   return (
-    <div className="card__wr_img">
+    <div className="card__img">
       {!loaded && <ImagePlaceholder />}
       <img
         alt="Dog"
