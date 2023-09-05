@@ -40,7 +40,8 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": "warn"
+    "@typescript-eslint/no-shadow": "warn",
+    "no-restricted-syntax": [ "warn", "ForStatement", "ForOfStatement" ],
   },
   ignorePatterns: [
     ".eslintrc.cjs",

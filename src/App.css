@@ -1,84 +1,103 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: none;
+  display: block;
 }
 
 a {
-    color: #005bc5;
+  color: #005bc5;
 }
+
+.clear {
+    clear: both;
+}
+
+/*
+
+  HEADER
+
+ */
 
 .header__wr {
-    width: 100%;
-    background-color: #ffffff;
-    height: 60px;
-    text-align: left;
-    box-shadow: 0 0 15px rgba(0,0,0,.1);
+  width: 100%;
+  background-color: #ffffff;
+  height: 60px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0,0,0,.1);
 }
 
-.header__wr_title {
-    height: 60px;
-    padding: 0 20px;
-    line-height: 60px;
-    font-size: 24px;
-    font-weight: bold;
-    float: left;
+.header__title {
+  height: 60px;
+  padding: 0 20px;
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  float: left;
+  color: #000;  
 }
 
-.header__wr_menu {
-    width: auto;
-    height: 60px;
-    float: left;
+.header__menu {
+  width: auto;
+  height: 60px;
+  float: left;
 }
 
-.header__wr_menu_list {
-    float: left;
-    list-style: none;
-    height: 60px;
-    margin: 0;
-    padding: 0;
+.header__list {
+  float: left;
+  list-style: none;
+  height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
-.header__wr_menu_list_elem {
-    height: 60px;
-    line-height: 60px;
+.header__elem {
+  height: 60px;
+  line-height: 60px;
 }
 
-.header__wr_menu_list_elem a {
-    color: #000000;
-    text-decoration: none;
-    height: 58px;
-    line-height: 60px;
-    display: inline-block;
-    padding: 0 10px;
-    margin: 0 0;
-    font-weight: 500;
-    border-bottom: 2px solid #ffffff;
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease;
+.header__elem a {
+  color: #000000;
+  text-decoration: none;
+  height: 58px;
+  line-height: 60px;
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0 0;
+  font-weight: 500;
+  border-bottom: 2px solid #ffffff;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
-.header__wr_menu_list_elem a.active {
-    color: #005bc5;
-    border-bottom: 2px solid #005bc5;
+.header__elem a.active {
+  color: #005bc5;
+  border-bottom: 2px solid #005bc5;
 }
 
-.header__wr_menu_list_elem a:hover {
-    color: #005bc5;
+.header__elem a:hover {
+  color: #005bc5;
 }
 
-.header__wr_menu_list_elem_external svg {
-    width: 16px;
-    display: block;
-    float: right;
-    margin-top: 17px;
-    margin-left: 10px;
+.header__external-link svg {
+  width: 16px;
+  display: block;
+  float: right;
+  margin-top: 17px;
+  margin-left: 10px;
 }
+
+/*
+
+ DOG CATALOG
+
+ */
 
 .dogs__wr {
     float: left;
@@ -97,6 +116,8 @@ a {
         text-align: left;
     }
 }
+
+/* SEARCH INPUT */
 
 .search__wr {
     width: calc(100% - 20px);
@@ -205,11 +226,21 @@ a {
 }
 
 .card__wr_refresh {
-    float: right;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 15px;
     font-size: 14px;
     font-weight: normal;
     color: #005bc5;
     margin-right: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.card__wr_refresh:hover {
+    border-bottom: 1px solid #005bc5;
 }
 
 .card__wr_img {
