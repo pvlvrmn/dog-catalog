@@ -3,10 +3,18 @@ import react from '@vitejs/plugin-react-swc'
 import svgr from 'vite-plugin-svgr' 
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: '/dog-catalog/',
-  plugins: [
-    react(),
-    svgr(),
-  ],
+export default defineConfig(({ command }) => {
+  const config = {
+    base: '/',
+    plugins: [
+      react(),
+      svgr(),
+    ]
+  }
+
+  if (command !== 'serve') {
+    config.base = '/dog-catalog/'
+  }
+
+  return config;
 })
