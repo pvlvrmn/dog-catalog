@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Image from '../Common/Image';
+import { useState, useEffect } from 'react';
 import { capitilize } from '../../api/index';
+// @ts-ignore
+import Image from '../Common/Image';
+// const Image = require('../Common/Image');
 
 function DogCard(props: any) {
   const [imgs, setImgs] = useState<string[]>([]);
@@ -57,7 +59,7 @@ function DogCard(props: any) {
       </div>
       <div className="clear" />
       {(props?.data.length !== 0)
-        ? <button type="button" className="card__refresh" href="#" onClick={() => getImages(false)}>Load more</button>
+        ? <button type="button" className="card__refresh" onClick={() => getImages(false)}>Load more</button>
         : ''}
     </div>
   );

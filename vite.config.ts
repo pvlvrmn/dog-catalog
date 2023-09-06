@@ -4,12 +4,9 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/dog-catalog/',
   plugins: [
     react(),
-    svgr({ 
-      svgrOptions: {
-        // svgr options
-      },
-    }),
+    svgr(),
   ],
 })
