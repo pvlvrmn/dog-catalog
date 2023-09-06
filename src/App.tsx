@@ -11,8 +11,8 @@ function App() {
         <Header />
         { /* Page routing */ }
         <Routes>
-          <Route path="/dog-catalog/" element={<DogPage />} />
-          <Route path="/dog-catalog/about" element={<About />} />
+          <Route path="/" element={<DogPage />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
