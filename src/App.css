@@ -228,7 +228,8 @@ a {
 
 .card__wr {
     width: calc(67% - 41px);
-    height: auto;
+    max-height: calc(100vh - 100px);
+    overflow-y: scroll;
     float: left;
     padding: 20px;
 }

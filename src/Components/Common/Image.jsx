@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ImagePlaceholder from './ImagePlaceholder';
 
-function Image(props: any) {
+function Image(props) {
   const [loaded, setLoaded] = useState(false);
   const { src } = props;
 
