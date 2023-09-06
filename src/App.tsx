@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename={import.meta.env.DEV ? '/' : '/react-vite-gh-pages/'}>
+    <Router basename={import.meta.env.DEV ? '/' : '/dog-catalog/'}>
       <div className="App">
         <Header />
         { /* Page routing */ }
