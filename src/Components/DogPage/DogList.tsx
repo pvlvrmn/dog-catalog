@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import DogElement from './DogElement';
 
 function DogList(props: any) {
@@ -17,7 +17,7 @@ function DogList(props: any) {
       {breeds?.map((breed) => {
         if (!query?.length || breed?.toLowerCase().includes(query?.toLowerCase())) {
           return (
-            <DogElement key={breed} breed={breed} classActive={breed === selection ? 'dogs__tile_active' : null} onClick={((e: React.ChangeEvent<any>) => handleClick(e, breed as string))} />
+            <DogElement key={breed} breed={breed} classActive={breed === selection ? 'dogs__tile_active' : null} onClick={(() => handleClick(breed as string))} />
           );
         }
         return '';

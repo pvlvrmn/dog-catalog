@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Search from './Search';
 import DogList from './DogList';
 import DogCard from './DogCard';
@@ -19,7 +19,7 @@ function DogPage() {
     setQuery(queryString);
   };
 
-  const handleClick = (e: React.ChangeEvent<any>, data: string) => {
+  const handleClick = (data: string) => {
     setSelection(data);
   };
 

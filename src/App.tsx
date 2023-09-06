@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Basic/Header';
 import DogPage from './Components/DogPage/DogPage';
@@ -12,8 +11,8 @@ function App() {
         <Header />
         { /* Page routing */ }
         <Routes>
-          <Route path="/dog-app/" element={<DogPage />} />
-          <Route path="/dog-app/about" element={<About />} />
+          <Route path="/dog-catalog/" element={<DogPage />} />
+          <Route path="/dog-catalog/about" element={<About />} />
         </Routes>
       </div>
     </Router>

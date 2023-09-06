@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+// @ts-ignore
 import { ReactComponent as ExternalIcon } from '../../assets/external.svg';
 
 function Header() {
@@ -15,9 +16,9 @@ function Header() {
         <div className="header__menu">
           <ul className="header__list">
             <li className="header__elem">
-              <a href="/dog-app/" className={path === '/dog-app/' ? 'active' : ''}>Main</a>
-              <a href="/dog-app/about" className={path === '/dog-app/about' ? 'active' : ''}>About</a>
-              <a target="_blank" href="https://github.com/pvlvrmn/dog-app" className="header__external-link" rel="noreferrer">
+              <a href="/dog-catalog/" className={path === '/dog-catalog/' ? 'active' : ''}>Main</a>
+              <a href="/dog-catalog/about" className={path === '/dog-catalog/about' ? 'active' : ''}>About</a>
+              <a target="_blank" href="https://github.com/pvlvrmn/dog-catalog" className="header__external-link" rel="noreferrer">
                 Git
                 <ExternalIcon />
               </a>

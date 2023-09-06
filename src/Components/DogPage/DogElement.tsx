@@ -1,5 +1,3 @@
-import React from 'react';
-
 function DogElement(props: any) {
   const { breed, onClick, classActive } = props;
 
