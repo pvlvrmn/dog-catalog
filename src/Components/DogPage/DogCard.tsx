@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { capitilize } from '../../api/index';
+import { getSubBreeds, getImages } from '../../api/index';
 // @ts-ignore
 import Image from '../Common/Image';
 // const Image = require('../Common/Image');
@@ -9,36 +9,17 @@ function DogCard(props: any) {
   const [subs, setSubs] = useState<string[]>();
   const { data } = props;
 
-  const getImages = async (isChanged = false) => {
-    if (data.length !== 0) {
-      const dataImages = await fetch(`https://dog.ceo/api/breed/${data.toLowerCase()}/images/random/3`, {
-        method: 'GET',
-      });
-      const jsonData = await dataImages.json();
-      if (isChanged) {
-        setImgs(jsonData.message);
-      } else {
-        setImgs([...imgs, ...jsonData.message]);
-      }
-    }
-  };
+
 
   // API for images
   useEffect(() => {
-    const getSubBreeds = async () => {
-      const dataBreeds = await fetch(`https://dog.ceo/api/breed/${data.toLowerCase()}/list`, {
-        method: 'GET',
-      });
-      const jsonData = await dataBreeds.json();
-      const result = await capitilize(jsonData.message);
-      setSubs(result);
-    };
+
 
     if (data.length > 0) {
       setImgs([]);
       setSubs([]);
-      getImages(true);
-      getSubBreeds();
+      getSubBreeds().then(result => setSubs(result));
+      getImages(imgs, data, true).then(result => setImgs(result));
     }
   }, [data]);
 
@@ -59,7 +40,7 @@ function DogCard(props: any) {
       </div>
       <div className="clear" />
       {(props?.data.length !== 0)
-        ? <button type="button" className="card__refresh" onClick={() => getImages(false)}>Load more</button>
+        ? <button type="button" className="card__refresh" onClick={() => getImages(imgs, data, false).then(result => setImgs(result))}>Load more</button>
         : ''}
     </div>
   );

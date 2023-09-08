@@ -16,8 +16,8 @@ function Header() {
         <div className="header__menu">
           <ul className="header__list">
             <li className="header__elem">
-              <a href="/dog-catalog/" className={path === '/dog-catalog/' ? 'active' : ''}>Main</a>
-              <a href="/dog-catalog/about" className={path === '/dog-catalog/about' ? 'active' : ''}>About</a>
+              <a href="./" className={path === '/dog-catalog/' ? 'active' : ''}>Main</a>
+              <a href="about" className={path === '/dog-catalog/about' ? 'active' : ''}>About</a>
               <a target="_blank" href="https://github.com/pvlvrmn/dog-catalog" className="header__external-link" rel="noreferrer">
                 Git
                 <ExternalIcon />

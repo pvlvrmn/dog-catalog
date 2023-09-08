@@ -1,4 +1,4 @@
-export function capitilize(names: Array<string>) {
+function capitilize(names: Array<string>) {
   const result: Array<string> = [];
   if (names.length === 0) {
     return [];
@@ -13,7 +13,7 @@ export function capitilize(names: Array<string>) {
   return result;
 }
 
-export function capitilizeWord(name: string) {
+function capitilizeWord(name: string) {
   const result = name[0].toUpperCase() + name.substr(1);
   return result;
 }
@@ -30,4 +30,37 @@ export const flattenObject = (obj: object) => {
   return result;
 };
 
-export default { capitilize, capitilizeWord, flattenObject };
+export const getBreeds = async () => {
+  const data = await fetch('https://dog.ceo/api/breeds/list/all', {
+    method: 'GET',
+  });
+  const jsonData = await data.json();
+  const rawData = await flattenObject(jsonData.message);
+  const result = await rawData.map((x) => capitilizeWord(x));
+  return result;
+};
+
+export const getSubBreeds = async () => {
+  const dataBreeds = await fetch(`https://dog.ceo/api/breed/${data.toLowerCase()}/list`, {
+    method: 'GET',
+  });
+  const jsonData = await dataBreeds.json();
+  const result = await capitilize(jsonData.message);
+  return result;
+};
+
+export const getImages = async (imgs: Array<string>, data: string, isChanged: boolean = false) => {
+  if (data.length !== 0) {
+    const dataImages = await fetch(`https://dog.ceo/api/breed/${data.toLowerCase()}/images/random/3`, {
+      method: 'GET',
+    });
+    const jsonData = await dataImages.json();
+    if (isChanged) {
+      return jsonData.message;
+    }
+    return [...imgs, ...jsonData.message];
+  }
+  return [];
+};
+
+export default { getBreeds, getSubBreeds, getImages };

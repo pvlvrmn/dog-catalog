@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Search from './Search';
 import DogList from './DogList';
 import DogCard from './DogCard';
-import { capitilizeWord, flattenObject } from '../../api/index';
+import { getBreeds } from '../../api/index';
 
 function DogPage() {
   // Breed list
@@ -13,8 +13,8 @@ function DogPage() {
   const [selection, setSelection] = useState<string>('');
 
   /*
-     *  Event Handelrs
-     */
+ *  Event Handelrs
+ */
   const handleQuery = (queryString: string):void => {
     setQuery(queryString);
   };
@@ -25,17 +25,7 @@ function DogPage() {
 
   // API handler
   useEffect(() => {
-    const api = async () => {
-      const data = await fetch('https://dog.ceo/api/breeds/list/all', {
-        method: 'GET',
-      });
-      const jsonData = await data.json();
-      const rawData = flattenObject(jsonData.message);
-      const result = rawData.map((x) => capitilizeWord(x));
-      setBreeds(result);
-    };
-
-    api();
+    getBreeds().then((result) => setBreeds(result));
   }, []);
 
   return (
