@@ -18,7 +18,7 @@ function DogCard(props: any) {
     if (data.length > 0) {
       setImgs([]);
       setSubs([]);
-      getSubBreeds().then(result => setSubs(result));
+      getSubBreeds(data).then(result => setSubs(result));
       getImages(imgs, data, true).then(result => setImgs(result));
     }
   }, [data]);

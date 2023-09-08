@@ -40,7 +40,7 @@ export const getBreeds = async () => {
   return result;
 };
 
-export const getSubBreeds = async () => {
+export const getSubBreeds = async (data: string) => {
   const dataBreeds = await fetch(`https://dog.ceo/api/breed/${data.toLowerCase()}/list`, {
     method: 'GET',
   });
