@@ -13,7 +13,7 @@ function capitalize(names: Array<string>) {
   return result;
 }
 
-function capitilizeWord(name: string) {
+function capitalizeWord(name: string) {
   const result = name[0].toUpperCase() + name.substr(1);
   return result;
 }
