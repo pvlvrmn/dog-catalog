@@ -6,16 +6,15 @@ function capitalize(names: Array<string>) {
     return [];
   }
   for (const sub of names) {
-    const subDone = sub[0].toUpperCase() + sub.substr(1);
+    const subDone = sub[0].toUpperCase() + sub.substring(1);
     result.push(subDone);
   }
 
   return result;
 }
 
-function capitalizeWord(name: string) {
-  const result = name[0].toUpperCase() + name.substr(1);
-  return result;
+function capitalizeWord(name: string): string {
+  return name[0].toUpperCase() + name.substring(1);
 }
 
 export const flattenObject = (obj: object) => {
@@ -35,9 +34,8 @@ export const getBreeds = async () => {
     method: 'GET',
   });
   const jsonData = await data.json();
-  const rawData = await flattenObject(jsonData.message);
-  const result = await rawData.map((x) => capitalizeWord(x));
-  return result;
+  const rawData = flattenObject(jsonData.message);
+  return rawData.map((x) => capitalizeWord(x));
 };
 
 export const getSubBreeds = async (data: string) => {
@@ -45,8 +43,7 @@ export const getSubBreeds = async (data: string) => {
     method: 'GET',
   });
   const jsonData = await dataBreeds.json();
-  const result = await capitalize(jsonData.message);
-  return result;
+  return capitalize(jsonData.message);
 };
 
 export const getImages = async (imgs: Array<string>, data: string, isChanged: boolean = false) => {

@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import Search from './Search';
 import DogList from './DogList';
 import DogCard from './DogCard';
-import {getBreeds} from '../../api/index';
+import {getBreeds} from '../../api';
 
 function DogPage() {
   // Breed list
@@ -12,9 +12,6 @@ function DogPage() {
   // Selected breed
   const [selection, setSelection] = useState<string>('');
 
-  /*
- *  Event Handelrs
- */
   const handleQuery = (queryString: string):void => {
     setQuery(queryString);
   };

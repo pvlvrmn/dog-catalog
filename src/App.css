@@ -26,9 +26,9 @@ a {
     background: #f6f7f8;
     background: linear-gradient(to right, #fafafa 8%, #f4f4f4 38%, #fafafa 54%);
     background-size: 1000px 640px;
-    
+
     position: relative;
-    
+
 }
 
 @keyframes placeholderAnimation{
@@ -61,7 +61,7 @@ a {
   font-size: 24px;
   font-weight: bold;
   float: left;
-  color: #000;  
+  color: #000;
 }
 
 .header__menu {
@@ -154,7 +154,7 @@ a {
 
 .search__icon {
     height: 50px;
-    padding: 0 0px;
+    padding: 0 0;
     float: left;
 }
 
@@ -168,7 +168,7 @@ a {
     height: 50px;
     font-size: 14px;
     width: calc(100% - 65px);
-    padding: 0px 10px;
+    padding: 0 10px;
     border: none;
     outline: none;
     float: left;
@@ -255,7 +255,6 @@ a {
 
 .card__refresh {
     padding: 0;
-    margin: 0 auto;
     margin-top: 15px;
     font-size: 14px;
     font-weight: normal;
@@ -275,7 +274,7 @@ a {
     width: calc(33% - 20px);
     height: 300px;
     overflow: hidden;
-    margin: 0 20px 20px 0; 
+    margin: 0 20px 20px 0;
     float: left;
     border-radius: 5px;
 }
@@ -313,7 +312,6 @@ a {
 
 .card__subbread {
     padding: 10px;
-    border: 5px;
     border-radius: 5px;
     /*float: left;*/
     display: inline-block;

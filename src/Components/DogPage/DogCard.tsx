@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {getImages, getSubBreeds} from '../../api/index';
+import {getImages, getSubBreeds} from '../../api';
 // @ts-ignore
 import Image from '../Common/Image';
 
