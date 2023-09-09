@@ -1,20 +1,14 @@
-import { useState, useEffect } from 'react';
-import { getSubBreeds, getImages } from '../../api/index';
+import {useEffect, useState} from 'react';
+import {getImages, getSubBreeds} from '../../api/index';
 // @ts-ignore
 import Image from '../Common/Image';
-// const Image = require('../Common/Image');
 
 function DogCard(props: any) {
   const [imgs, setImgs] = useState<string[]>([]);
   const [subs, setSubs] = useState<string[]>();
   const { data } = props;
 
-
-
-  // API for images
   useEffect(() => {
-
-
     if (data.length > 0) {
       setImgs([]);
       setSubs([]);
@@ -40,7 +34,9 @@ function DogCard(props: any) {
       </div>
       <div className="clear" />
       {(props?.data.length !== 0)
-        ? <button type="button" className="card__refresh" onClick={() => getImages(imgs, data, false).then(result => setImgs(result))}>Load more</button>
+        ? <button type="button" className="card__refresh" onClick={
+            () => getImages(imgs, data, false).then(result => setImgs(result))}
+          >Load more</button>
         : ''}
     </div>
   );

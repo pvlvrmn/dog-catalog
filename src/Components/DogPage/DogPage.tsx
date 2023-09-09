@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import Search from './Search';
 import DogList from './DogList';
 import DogCard from './DogCard';
-import { getBreeds } from '../../api/index';
+import {getBreeds} from '../../api/index';
 
 function DogPage() {
   // Breed list

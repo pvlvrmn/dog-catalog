@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 // @ts-ignore
-import { ReactComponent as ExternalIcon } from '../../assets/external.svg';
+import {ReactComponent as ExternalIcon} from '../../assets/external.svg';
 
 function Header() {
   const [path, setPath] = useState<string>('');
