@@ -2,17 +2,37 @@ import {useEffect, useState} from 'react';
 // @ts-ignore
 import {ReactComponent as ExternalIcon} from '../../assets/external.svg';
 
+function getWindowSize() {
+  const {innerWidth} = window;
+  return innerWidth;
+}
+
 function Header() {
+  const [winWidth, setWinWidth] = useState(getWindowSize());
   const [path, setPath] = useState<string>('');
 
   useEffect(() => {
     setPath(window.location.pathname);
   }, [window.location.pathname]);
 
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWinWidth(getWindowSize());
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
   return (
     <header>
       <div className="header__wr">
-        <div className="header__title">🐶 Dogs Catalog</div>
+        <div className="header__title">🐶 
+          { winWidth > 450 ? ' Dogs Catalog' : ' Dogs' }
+        </div>
         <div className="header__menu">
           <ul className="header__list">
             <li className="header__elem">
@@ -29,5 +49,6 @@ function Header() {
     </header>
   );
 }
+
 
 export default Header;
