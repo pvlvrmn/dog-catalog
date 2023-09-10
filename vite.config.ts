@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
-defineConfig(({ command }) => {
+export default defineConfig(({ command }) => {
   const config = {
     base: '/',
     plugins: [
