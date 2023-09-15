@@ -7,6 +7,10 @@ const config: Config.InitialOptions = {
         'node_modules/(?!variables/.*)'
     ],
     verbose: true,
+    transform: {
+        '^.+\\.(ts|tsx)$': 'ts-jest',
+        '^.+\\.svg$': '<rootDir>/svgTransform.cjs',
+    },
     moduleDirectories: [
         'node_modules',
         'src',
