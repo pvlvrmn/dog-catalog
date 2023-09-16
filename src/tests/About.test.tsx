@@ -8,12 +8,6 @@ describe('About page', () => {
         const linkElem = screen.getByText('Tech stack');
         expect(linkElem).toBeInTheDocument();
     });
-    //
-    // test('Number of links', () => {
-    //     render(<About />);
-    //     const linkElem = screen.getByRole('a');
-    //     expect(linkElem).toBeInTheDocument();
-    // })
 
     it('About renders correctly', () => {
         const tree = render(<About />)
