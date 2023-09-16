@@ -44,6 +44,19 @@ module.exports = {
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "warn",
     "no-restricted-syntax": [ "warn", "ForStatement", "ForOfStatement" ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "test.{ts,tsx}", // repos with a single test file
+          "test-*.{ts,tsx}", // repos with multiple top-level test files
+          "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
+          "**/jest.config.ts", // jest config
+          "**/jest.setup.ts" // jest setup
+        ],
+        "optionalDependencies": false
+      }
+    ]
   },
   ignorePatterns: [
     ".eslintrc.cjs",

@@ -9,7 +9,6 @@ function App() {
     <Router basename={import.meta.env.DEV ? '/' : '/dog-catalog/'}>
       <div className="App">
         <Header />
-        { /* Page routing */ }
         <Routes>
           <Route path="/" element={<DogPage />} />
           <Route path="/about" element={<About />} />

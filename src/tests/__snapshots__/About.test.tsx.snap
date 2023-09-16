@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About page About renders correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="about__wr"
+      >
+        <div
+          class="about__title"
+        >
+          <h1>
+            About this project
+          </h1>
+        </div>
+        <div
+          class="about__body"
+        >
+          This project was built specifically for
+           
+          <a
+            href="https://dog.ceo/dog-api/documentation/"
+          >
+            Dog API
+          </a>
+          .
+          <br />
+          <br />
+          <h2>
+            Tech stack
+          </h2>
+          <ul
+            class="about__stack"
+          >
+            <li>
+              <a
+                href="https://react.dev/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                React
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://reactrouter.com/en/main"
+                rel="noreferrer"
+                target="_blank"
+              >
+                React Router
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.typescriptlang.org/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Typescript
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://vitejs.dev/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Vite
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://eslint.org/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                ESLint
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.npmjs.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                npm
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="about__wr"
+    >
+      <div
+        class="about__title"
+      >
+        <h1>
+          About this project
+        </h1>
+      </div>
+      <div
+        class="about__body"
+      >
+        This project was built specifically for
+         
+        <a
+          href="https://dog.ceo/dog-api/documentation/"
+        >
+          Dog API
+        </a>
+        .
+        <br />
+        <br />
+        <h2>
+          Tech stack
+        </h2>
+        <ul
+          class="about__stack"
+        >
+          <li>
+            <a
+              href="https://react.dev/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              React
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://reactrouter.com/en/main"
+              rel="noreferrer"
+              target="_blank"
+            >
+              React Router
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.typescriptlang.org/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Typescript
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://vitejs.dev/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Vite
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://eslint.org/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              ESLint
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.npmjs.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              npm
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
