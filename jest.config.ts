@@ -1,4 +1,4 @@
-import type { Config } from '@jest/types';
+import type {Config} from '@jest/types';
 
 const config: Config.InitialOptions = {
     testEnvironment: 'jsdom',
@@ -8,8 +8,7 @@ const config: Config.InitialOptions = {
     ],
     verbose: true,
     transform: {
-        '^.+\\.(ts|tsx)$': 'ts-jest',
-        '^.+\\.svg$': '<rootDir>/svgTransform.cjs',
+        '^.+\\.(ts|tsx)$': 'ts-jest'
     },
     moduleDirectories: [
         'node_modules',
