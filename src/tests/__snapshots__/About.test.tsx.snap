@@ -63,15 +63,6 @@ exports[`About page About renders correctly 1`] = `
             </li>
             <li>
               <a
-                href="https://jestjs.io/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Jest
-              </a>
-            </li>
-            <li>
-              <a
                 href="https://vitejs.dev/"
                 rel="noreferrer"
                 target="_blank"
@@ -157,15 +148,6 @@ exports[`About page About renders correctly 1`] = `
               target="_blank"
             >
               Typescript
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://jestjs.io/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Jest
             </a>
           </li>
           <li>
