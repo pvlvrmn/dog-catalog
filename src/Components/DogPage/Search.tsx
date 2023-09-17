@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// @ts-ignore
+// @ts-ignoreaa
 import {ReactComponent as SearchIcon} from '../../assets/search.svg';
 // @ts-ignore
 import {ReactComponent as ClearIcon} from '../../assets/clear.svg';

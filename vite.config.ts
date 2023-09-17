@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
     plugins: [
       react(),
       svgr(),
-    ]
+    ],
   }
 
   if (command !== 'serve') {
